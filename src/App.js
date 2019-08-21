@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Form from './components/Form'
 import Detail from './components/Detail'
 import Footer from './components/Footer'
+import './App.css'
 
 const ACCESS_TOKEN = 'pk.eyJ1IjoibWlzdXRpbmVrbyIsImEiOiJjanphajZ2NzQwMTVvM2J0aDg2MXZueTF3In0.pTNnGLqr6WvhFghmiiHJdA'
 const API_KEY = '4b24129feacca9b38aac8f2021b82534'

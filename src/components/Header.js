@@ -18,7 +18,7 @@ const Header = ({ placeName }) => {
   }
 
   return (
-    <div>
+    <div className="hero">
       <h1>Weather App</h1>
       <h1>{time.toLocaleTimeString()}</h1> {/*display time as hh:mm:ss - am/pm string*/}
       <h1>{placeName}</h1>
