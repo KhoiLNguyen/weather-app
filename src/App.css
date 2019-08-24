@@ -5,7 +5,8 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -21,6 +22,8 @@ body {
   line-height: 1.7;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+  background-image: -o-linear-gradient(left, #fa709a 0%, #fee140 100%);
   background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
   overflow: auto;
 }
@@ -31,7 +34,9 @@ body {
 }
 
 .hero {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   padding-top: 6.8rem;
@@ -42,9 +47,16 @@ body {
 }
 
 .search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 2rem;
 }
 
@@ -54,6 +66,26 @@ body {
   height: 4rem;
   background: #fff;
   border: none;
+}
+
+.search-box::-webkit-input-placeholder {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+}
+
+.search-box::-moz-placeholder {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+}
+
+.search-box:-ms-input-placeholder {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+}
+
+.search-box::-ms-input-placeholder {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
 }
 
 .search-box::placeholder {
@@ -66,7 +98,8 @@ body {
   height: rem;
   margin-top: 2rem;
   background: #f9d248;
-  box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   cursor: pointer;
   border: none;
@@ -85,13 +118,23 @@ body {
   height: 50rem;
   margin: 0 auto;
   background: #352121;
-  box-shadow: 1rem 1rem 1rem rgba(71, 9, 28, 0.5);
+  -webkit-box-shadow: 1rem 1rem 1rem rgba(71, 9, 28, 0.5);
+          box-shadow: 1rem 1rem 1rem rgba(71, 9, 28, 0.5);
   border-radius: 2.5rem; 
   margin-top: 2rem;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .display-detail h4 {
@@ -147,6 +190,8 @@ body {
   }
 }
 
+
+
 @media (max-width: 823px) and (max-height: 525px) {
   html {
     font-size: 35%;
@@ -156,9 +201,48 @@ body {
     height: 25rem;
 
   
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+
+  
+    -webkit-box-direction: normal;
+
+  
+        -ms-flex-direction: row;
+
+  
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 846px) and (max-height: 414px) {
+  html {
+    font-size: 35%;
+  }
+  .display-detail {
+    width: 100rem;
+    height: 25rem;
+
+  
+    -webkit-box-orient: horizontal;
+
+  
+    -webkit-box-direction: normal;
+
+  
+        -ms-flex-direction: row;
+
+  
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -169,9 +253,15 @@ body {
   }  
 
   .temp-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly
   }
 }
 
@@ -189,9 +279,16 @@ body {
 
 @media (max-width: 500px) {
   .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
