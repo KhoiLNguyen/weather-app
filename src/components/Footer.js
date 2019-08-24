@@ -2,9 +2,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
+    <footer className="footer-text">
       <span>&copy; Weather App by Khoi Nguyen - 2019</span>
-    </div>
+    </footer>
   )
 }
 

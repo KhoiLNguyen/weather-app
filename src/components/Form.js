@@ -16,15 +16,16 @@ const Form = ({ geocode }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="search-form">
       <input 
+        className="search-box"
         type="text"
         name="location"
         value={search}
         placeholder="Enter Location..."
         onChange={e => setSearch(e.target.value)}  
       />
-      <button type="submit">Get weather!</button>
+      <button type="submit" className="btn">Get weather!</button>
     </form>
   )
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Satisfy&display=swap");
 
 *,
 *::before,
@@ -10,16 +10,108 @@
 
 html {
   font-size: 62.5%;
+  height: 100vh;
 }
 
 body {
-  font-family: 'Satisfy', cursive;
+  height: 100vh;
+  margin: 0;
+  font-family: "Satisfy", cursive;
   font-weight: 400;
   line-height: 1.7;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #db4f7a 34.9%, #fee140 100%);
 }
 
 .hero {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  padding-top: 6.8rem;
+}
+
+.hero h1 {
+  font-size: 4.8rem;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.search-box {
+  text-align: center;
+  width: 20rem;
+  height: 4rem;
+  background: #fff;
+  border: none;
+}
+
+.search-box::placeholder {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+}
+
+.search-form .btn {
+  width: 22.8rem;
+  height: rem;
+  margin-top: 2rem;
+  background: #f9d248;
+  box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+  font-family: "Satisfy", cursive;
+  font-size: 3.6rem;
+}
+
+.load-icon {
+  text-align: center;
+
+}
+
+.display-detail {
+  text-align: center;
+  width: 40rem;
+  height: 50rem;
+  margin: 0 auto;
+  background: #352121;
+  box-shadow: 1rem 1rem 1rem rgba(71, 9, 28, 0.5);
+  border-radius: 2.5rem; 
+  margin-top: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.display-detail h4 {
+  color: #fff;
+  font-size: 3.6rem;
+}
+
+.display-detail ul {
+  color: #fff;
+  list-style: none;
+  font-size: 2.4rem;
+  margin-top: 2rem;
+}
+
+.temp-icon {
+  font-size: 4rem;
+}
+
+.temp-icon h3 {
+  color: #fff;
+}
+
+.footer-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 3.6rem;
 }

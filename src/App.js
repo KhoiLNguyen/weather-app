@@ -22,17 +22,16 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   const geocode = async (location) => {
-    setIsLoading(true)
     if(location) {
+      setIsLoading(true)
       const response = await fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?limit=1&access_token=${ACCESS_TOKEN}`)
       const data = await response.json()
       const latitude = data.features[0].center[1]
       const longitude = data.features[0].center[0]
-      setPlaceName(data.features[0].place_name)
-      setIsLoading(false)
+      setPlaceName(data.features[0].text)
       forecast(latitude, longitude)
     }
-    
+    setIsLoading(false)
   }
 
   const forecast = async (latitude, longitude) => {
@@ -63,7 +62,6 @@ const App = () => {
         isLoading={isLoading}
       />
       <Footer />
-
     </div>
   )
 }
