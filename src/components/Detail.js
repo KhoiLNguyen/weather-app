@@ -6,7 +6,7 @@ const Detail = ({ temp, desc, humid, pop, wind, feel, icon, isLoading }) => {
   const styleIcon = {
     icon,
     color: "#fee140",
-    size: 80,
+    size: 72,
     animate: true
   };
 
